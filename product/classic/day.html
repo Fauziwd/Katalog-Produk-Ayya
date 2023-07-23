@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilan Detail Klassik Day</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        /* Menambahkan transisi ke elemen dengan ID yang berakhiran "-menu" */
+        [id$="-menu"] {
+            transition: border-bottom 1s ease;
+        }
+
+        /* Membuat warna garis biru lebih pekat ketika dipilih */
+        [id$="-menu"].active {
+            border-bottom: 2px solid #007bff;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Montserrat', sans-serif; margin: 0; padding: 0;">
+    <div style="display: flex; max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <div style="flex: 1; max-width: 26rem; overflow: hidden;" data-tilt data-tilt-max="5" data-tilt-glare
+        data-tilt-max-glare="0.5" data-tilt-speed="8000" data-tilt-perspective="500">
+            <img src="../../img/klassik-1a.jpg" style="max-width: 100%; height: auto; display: block; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);"
+                alt="Gambar Produk">
+        </div>
+        <div style="flex: 1; padding-left: 20px;">
+            <div style=" padding: 20px;max-width: 100%; height: 10rem; background-color: rgb(205, 182, 106); border-radius: 10px; margin-left: 7px;">
+            <h3 style="margin-top: 1px; color: rgb(35, 35, 35);">Classic</h3>
+            <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 10px; color: #f2f2f2;">Ayya Menspad Klassik Day</h1>
+            <div style="font-size: 20px; color: #beef94; margin-bottom: 10px;">Rp 100.000</div>
+            <div style="margin-bottom: 2rem;">
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            <span class="fa fa-star checked" style="color: orange;"></span>
+            </div>
+            </div>
+            <!-- Menu Tabs -->
+            <div style="padding: 20px; max-width: 94%; background-color: rgb(205, 182, 106); height: 16rem; border-radius: 10px; margin: 10px 10px 10px 7px; overflow-y: auto;">
+                <div style="display: flex; margin-bottom: 10px;">
+                    <div id="deskripsi-menu" style="flex: 1; text-align: center; background-color: rgb(205, 182, 106); color: #f2f2f2; cursor: pointer; padding: 10px; margin-right: 5px; border-bottom: 2px solid #007bff;" onclick="showTab('deskripsi')">Deskripsi</div>
+                    <div id="fitur-menu" style="flex: 1; text-align: center; background-color: rgb(205, 182, 106); color: #f2f2f2; cursor: pointer; padding: 10px; margin-right: 5px;" onclick="showTab('fitur')">Fitur</div>
+                    <div id="spesifikasi-menu" style="flex: 1; text-align: center; background-color: rgb(205, 182, 106); color: #f2f2f2; cursor: pointer; padding: 10px;" onclick="showTab('spesifikasi')">Spesifikasi</div>
+                </div>
+                <!-- Konten Berbeda untuk Setiap Tab -->
+                <div id="deskripsi-tab" style="display: block;">
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">Deskripsi singkat tentang produk ini. Deskripsi dapat berisi informasi penting mengenai produk, seperti fitur utama, bahan, atau ukuran.</p>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">Deskripsi lebih lengkap tentang produk ini. Anda dapat memberikan informasi detail tentang spesifikasi, penggunaan, dan manfaat produk.</p>
+                </div>
+                <div id="fitur-tab" style="display: none;">
+                    <!-- Konten Fitur -->
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">Deskripsi singkat tentang Fitur produk ini. Deskripsi dapat berisi informasi penting mengenai produk, seperti fitur utama, bahan, atau ukuran.</p>
+                </div>
+                <div id="spesifikasi-tab" style="display: none; max-height: 80vh; overflow-y: auto;">
+                    <!-- Konten Spesifikasi -->
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">Deskripsi singkat tentang Spesifikasi produk ini. Deskripsi dapat berisi informasi penting mengenai produk, seperti fitur utama, bahan, atau ukuran.</p>
+                    <li style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;"> Inner ( permukaan dalam ) = Kaos PE lembut.</li>
+                    <li style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;"> Inner (  Insert ( penyerap )) = Kain Fleece daya serap tinggi.</li>
+                    <li style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;"> Kain Luar = Kain Katun Jepang tidak mudah luntur.</li>
+                </div>
+            </div>            
+            <div style="margin-top: 7px; position: fixed; justify-content: flex-start;">
+                <a id="whatsapp-link">
+                    <button style="background-color: #007bff; color: #bed0f2; padding: 10px 20px; font-size: 16px; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease;">Hubungi Penjual</button>
+                </a>
+                <a href="../../index.html#pricing">
+                <button style="background-color: #cbebbd; color: #132e00; padding: 10px 20px; font-size: 16px; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.3s ease;">Kembali</button>
+                </a>
+                </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="../../js/vanilla-tilt.js"></script>
+    <script>
+        function showTab(tabName) {
+            var tabs = document.querySelectorAll('[id$="-tab"]');
+            for (var i = 0; i < tabs.length; i++) {
+                if (tabs[i].id === tabName + '-tab') {
+                    tabs[i].style.display = 'block';
+                    document.getElementById(tabName + '-menu').style.borderBottom = '2px solid #007bff';
+                } else {
+                    tabs[i].style.display = 'none';
+                    document.getElementById(tabs[i].id.replace('-tab', '-menu')).style.borderBottom = 'none';
+                }
+            }
+        }
+
+        // Fungsi untuk mendapatkan URL halaman saat ini
+        function getCurrentURL() {
+                return window.location.href;
+            }
+
+            // Fungsi untuk mengirim pesan WhatsApp dengan URL halaman saat ini
+            function sendMessage() {
+                var currentURL = getCurrentURL();
+                var message = "Halo ka., saya tertarik dengan produk ini.. " + currentURL + " apakah barangnya sudah ada?"
+                var encodedMessage = encodeURIComponent(message);
+                var phoneNumber = "6287734732447"; // Ganti dengan nomor telepon tujuan
+
+                var whatsappURL = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodedMessage;
+                window.location.href = whatsappURL;
+            }
+
+            // Menambahkan event listener untuk tautan WhatsApp
+            var whatsappLink = document.getElementById("whatsapp-link");
+            whatsappLink.addEventListener("click", sendMessage);
+        </script>
+</body>
+
+</html>
